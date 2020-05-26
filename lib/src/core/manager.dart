@@ -13,6 +13,8 @@ class CacheManager {
   MD5 _md5;
   Utf8Encoder _utf8encoder;
 
+  CacheConfig get config => _config;
+
   CacheManager(this._config) {
     _md5 = md5;
     _utf8encoder = const Utf8Encoder();

@@ -26,6 +26,11 @@ class DioCacheManager {
     _baseUrl = config.baseUrl;
   }
 
+  DioCacheManager.fromManager(CacheManager manager) {
+    _manager = manager;
+    _baseUrl = manager.config.baseUrl;
+  }
+
   /// interceptor for http cache.
   get interceptor {
     if (null == _interceptor) {
